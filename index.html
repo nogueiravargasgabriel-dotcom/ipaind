@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artes Indígenas: Desafio ENEM e Guia de Estudo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4CAF50; /* Verde vibrante */
+            --secondary-color: #FFC107; /* Amarelo energizante */
+            --accent-color: #2196F3; /* Azul para destaques */
+            --text-color: #333;
+            --light-text-color: #555;
+            --bg-light: #f8f9fa;
+            --bg-medium: #e9ecef;
+            --bg-dark: #343a40;
+            --border-color: #dee2e6;
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --shadow-medium: rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            scroll-behavior: smooth;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), #2e8b3a);
+            color: white;
+            padding: 50px 20px 45px;
+            text-align: center;
+            box-shadow: 0 6px 15px var(--shadow-medium);
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(76, 175, 80, 0.8), rgba(33, 150, 243, 0.6));
+            z-index: 0;
+        }
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            right: -60px;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: rgba(255, 193, 7, 0.18);
+            z-index: 0;
+        }
+        .header-icons {
+            position: relative;
+            z-index: 1;
+            font-size: 1.8em;
+            letter-spacing: 14px;
+            margin-bottom: 10px;
+            filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.25));
+        }
+        .header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5em;
+            margin: 0;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .header p {
+            font-size: 1.3em;
+            margin-top: 15px;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8em;
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 15px;
+            border-bottom: 4px solid var(--secondary-color);
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -7px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px var(--shadow-light);
+            margin-bottom: 45px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border-top: 6px solid var(--primary-color);
+        }
+        .card:nth-of-type(3n+2) { border-top-color: var(--accent-color); }
+        .card:nth-of-type(3n) { border-top-color: var(--secondary-color); }
+        .card::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(76,175,80,0.07), transparent 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px var(--shadow-medium);
+        }
+        .card h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2em;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 25px;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 15px;
+            text-align: left;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+        }
+        .card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6em;
+            color: var(--accent-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        .card-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 48px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            font-size: 0.7em;
+            margin-right: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+            flex-shrink: 0;
+        }
+        .icon-quiz { background: linear-gradient(135deg, var(--secondary-color), #ff7043); }
+        .icon-notebook { background: linear-gradient(135deg, #ffb300, var(--secondary-color)); }
+
+        p {
+            margin-bottom: 1em;
+            color: var(--light-text-color);
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 25px;
+            margin-bottom: 1em;
+            color: var(--light-text-color);
+        }
+        li {
+            margin-bottom: 0.6em;
+        }
+
+        .enem-tip {
+            background-color: #e8f5e9; /* Light green */
+            border-left: 5px solid var(--primary-color);
+            padding: 18px;
+            margin: 25px 0;
+            font-style: italic;
+            color: #388e3c; /* Darker green */
+            border-radius: 5px;
+            font-size: 0.95em;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .enem-tip strong {
+            color: #1b5e20; /* Even darker green */
+        }
+
+        .key-concepts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+        .key-concept-item {
+            background-color: var(--secondary-color);
+            color: var(--bg-dark);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .highlight {
+            background-color: #fff9c4; /* Light yellow */
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        .diagram-text {
+            font-style: italic;
+            color: var(--light-text-color);
+            margin-top: 15px;
+            text-align: center;
+            background-color: var(--bg-medium);
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px dashed var(--border-color);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        /* Question Block Styling */
+        .question-block {
+            background-color: #e3f2fd; /* Light blue */
+            border: 1px solid #90caf9; /* Medium blue */
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 45px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .question-block h2 {
+            color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
+        }
+        .question-block h3 {
+            color: var(--accent-color);
+            border-left-color: var(--accent-color);
+            margin-top: 30px;
+        }
+        .question-options label {
+            display: block;
+            margin-bottom: 12px;
+            padding: 15px;
+            background-color: #f0f8ff; /* Very light blue */
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+            border: 1px solid #e0f2f7;
+        }
+        .question-options label:hover {
+            background-color: #e1f5fe; /* Lighter blue on hover */
+            border-color: #bbdefb;
+        }
+        .question-options input[type="radio"] {
+            margin-right: 12px;
+            transform: scale(1.2);
+            vertical-align: middle;
+        }
+        .check-answer-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.05em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .check-answer-btn:hover {
+            background-color: #1976d2; /* Darker blue */
+            transform: translateY(-2px);
+        }
+        .feedback {
+            margin-top: 15px;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+        .feedback.correct {
+            color: var(--primary-color);
+        }
+        .feedback.incorrect {
+            color: #d32f2f; /* Red */
+        }
+        .explanation {
+            margin-top: 20px;
+            font-size: 0.95em;
+            color: var(--light-text-color);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+            background-color: #eaf6fb;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        /* Caderno de Anotações */
+        .notebook-section {
+            background-color: #fffde7; /* Very light yellow */
+            border: 2px dashed var(--secondary-color);
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 45px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .notebook-section h2 {
+            color: var(--secondary-color);
+            border-bottom-color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .notebook-section p {
+            font-size: 1.1em;
+            color: var(--light-text-color);
+            margin-bottom: 20px;
+        }
+        .notebook-area {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #fcfcfc;
+            border: 1px solid #ffecb3; /* Light yellow border */
+            border-radius: 5px;
+            text-align: left;
+        }
+        .notebook-area label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: var(--light-text-color);
+        }
+        .notebook-area textarea {
+            width: calc(100% - 20px);
+            min-height: 100px;
+            padding: 10px;
+            border: 1px solid #ffcc80; /* Orange-ish border */
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.95em;
+            resize: vertical;
+            background-color: #fff;
+        }
+
+        .generate-notes-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: fit-content;
+            margin: 30px auto 0;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .generate-notes-btn:hover {
+            background-color: #388e3c; /* Darker green */
+            transform: translateY(-2px);
+        }
+        .generate-notes-btn-wrap {
+            display: block;
+            text-align: center;
+        }
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .action-buttons .generate-notes-btn {
+            margin: 0;
+        }
+        .copy-btn {
+            background-color: #607d8b;
+        }
+        .copy-btn:hover {
+            background-color: #455a64;
+        }
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+        .whatsapp-btn:hover {
+            background-color: #1ebd59;
+        }
+        .email-btn {
+            background-color: #ea4335;
+        }
+        .email-btn:hover {
+            background-color: #d33426;
+        }
+        .copy-feedback {
+            display: block;
+            text-align: center;
+            margin-top: 12px;
+            font-weight: 700;
+            color: var(--primary-color);
+            min-height: 1.2em;
+        }
+
+        #final-notes-sheet {
+            display: none;
+            margin-top: 40px;
+            padding: 30px;
+            background-color: #e8f5e9; /* Light green */
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px var(--shadow-medium);
+        }
+        #final-notes-sheet h2 {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+        #final-notes-content {
+            white-space: pre-wrap;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            line-height: 1.5;
+        }
+        .print-btn {
+            background-color: var(--accent-color);
+            margin-top: 20px;
+        }
+        .print-btn:hover {
+            background-color: #1976d2;
+        }
+
+        .references {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9em;
+            color: var(--light-text-color);
+        }
+        .references h3 {
+            color: var(--text-color);
+            border-left-color: var(--text-color);
+        }
+        .references a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .references a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            background-color: var(--bg-dark);
+            color: white;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-icons">🎨 🪶 🌿 🏺 🖐️</div>
+        <h1>ARTES INDÍGENAS: Desafio ENEM e Guia de Estudo</h1>
+        <p>Prepare-se para o ENEM explorando a riqueza das artes indígenas brasileiras!</p>
+    </div>
+
+    <div class="container">
+        <div class="notebook-section">
+            <h2><span class="card-icon icon-notebook">📝</span>Seu Caderno de Estudo</h2>
+            <p>Use este espaço para fazer anotações detalhadas enquanto explora o conteúdo abaixo. Ele será seu material de apoio para o ENEM!</p>
+            <div class="notebook-area">
+                <label for="general-notes">Anotações Gerais do Caderno:</label>
+                <textarea id="general-notes" placeholder="Comece a anotar aqui os conceitos-chave, suas dúvidas e as conexões que você fizer!"></textarea>
+            </div>
+        </div>
+
+        <h2 class="section-title">📚 Explore o Conteúdo</h2>
+
+        <div class="card">
+            <h2><span class="card-icon icon-1">🎨</span>Introdução: O que é "Arte Indígena"?</h2>
+            <p>Quem decide se um objeto é “arte”? E o que muda quando ele circula num museu, numa aldeia, numa loja ou num livro escolar?</p>
+            <div class="key-concepts">
+                <span class="key-concept-item">FORMA</span>
+                <span class="key-concept-item">CAMPO</span>
+                <span class="key-concept-item">PODER</span>
+            </div>
+            <p>Essa é uma pergunta fundamental sobre forma, contexto e poder. O valor de um objeto cultural não está nele isoladamente: é produzido no campo social em que se insere. Importam o lugar que ocupa, os grupos que o fazem circular e os discursos que justificam seu valor.</p>
+            <div class="enem-tip">
+                <strong>Relevância para o ENEM:</strong> Questões sobre arte e cultura no ENEM frequentemente abordam a ideia de que a arte não é um conceito universal e imutável. A contextualização e a valorização de diferentes manifestações culturais são temas recorrentes. Pense em como a visão ocidental de "arte" pode se chocar com a funcionalidade e o significado cultural das produções indígenas.
+            </div>
+            <div class="notebook-area">
+                <label for="notes-1">Anotações sobre a Introdução:</label>
+                <textarea id="notes-1" placeholder="Anote aqui os pontos principais, suas dúvidas ou conexões com outros temas..."></textarea>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><span class="card-icon icon-2">⚖️</span>O Campo Cultural e a Luta por Significado</h2>
+            <h3>Stuart Hall e a desconstrução do "popular"</h3>
+            <p>Em “Notas sobre a desconstrução do ‘popular’” (2003), Stuart Hall afirma: “o significado de uma forma cultural e seu lugar ou posição no campo cultural não está inscrito no interior de sua forma. Nem se pode garantir para sempre sua posição”.</p>
+            <div class="key-concepts">
+                <span class="key-concept-item">FORMA</span>
+                <span class="key-concept-item">CAMPO</span>
+                <span class="key-concept-item">PODER</span>
+            </div>
+            <p>O campo cultural é um espaço de disputas: posições de poder podem ser contestadas e reconfiguradas. Por isso, vale perguntar quem produz os discursos sobre cultura, por que certos discursos são aceitos e quem ganha autoridade para classificar.</p>
+            <p>A obra não muda necessariamente de forma quando muda de contexto; o que pode mudar é sua posição social, sua interpretação e o valor que lhe é atribuído.</p>
+            <div class="key-concepts">
+                <span class="key-concept-item">grupos</span>
+                <span class="key-concept-item">discursos</span>
+                <span class="key-concept-item">instituições</span>
+            </div>
+            <div class="enem-tip">
+                <strong>Relevância para o ENEM:</strong> A teoria de Stuart Hall é fundamental para entender como o valor cultural é construído socialmente. No ENEM, isso pode aparecer em questões que pedem para analisar a legitimação de certas manifestações artísticas ou a desvalorização de outras, especialmente as de culturas minoritárias.
+            </div>
+            <div class="notebook-area">
+                <label for="notes-2">Anotações sobre o Campo Cultural:</label>
+                <textarea id="notes-2" placeholder="Como a ideia de 'campo de lutas' se aplica à arte indígena?"></textarea>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><span class="card-icon icon-3">🌎</span>Diversidade Indígena e o "Marco Zero"</h2>
+            <h3>A riqueza dos povos originários</h3>
+            <p>O Brasil possui uma imensa diversidade de povos indígenas. O Censo 2022 identificou <span class="highlight">391 etnias, povos ou grupos indígenas e 295 línguas</span>. Essa diversidade inclui modos próprios de organização social, línguas, práticas, ícones, rituais e objetos artesanais.</p>
+            <div class="enem-tip">
+                <strong>Relevância para o ENEM:</strong> O ENEM valoriza o reconhecimento da diversidade cultural brasileira. Conhecer esses números e a ideia de que a população indígena não é homogênea é crucial para desmistificar preconceitos e entender a complexidade do tema.
+            </div>
+            <h3>O problema do "marco zero"</h3>
+            <p>A síntese “arte indígena = arte brasileira original” pode parecer valorizadora, mas traz riscos: recorta seletivamente manifestações diversas e as transforma em origem única. Não existe um só povo originário; desde sempre houve múltiplas etnias no território, cada qual com expressões próprias.</p>
+            <div class="key-concepts">
+                <span class="key-concept-item">OBJETO</span>
+                <span class="key-concept-item">CIRCULAÇÃO</span>
+                <span class="key-concept-item">DISCURSO</span>
+                <span class="key-concept-item">VALOR</span>
+            </div>
+            <p>O maior problema é limitar as produções indígenas aos primórdios da arte nacional, tratando-as como “primitivas” e congeladas no tempo. Isso torna invisíveis as criações indígenas contemporâneas.</p>
+            <div class="enem-tip">
+                <strong>Relevância para o ENEM:</strong> A crítica ao "marco zero" e à visão "primitivista" da arte indígena é um ponto chave. O ENEM pode apresentar textos que questionam a apropriação cultural ou a visão estereotipada dos povos indígenas, exigindo uma análise crítica sobre a historicidade e a contemporaneidade dessas culturas.
+            </div>
+            <div class="notebook-area">
+                <label for="notes-3">Anotações sobre Diversidade e "Marco Zero":</label>
+                <textarea id="notes-3" placeholder="Como a ideia de 'arte primitiva' prejudica a compreensão da arte indígena atual?"></textarea>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><span class="card-icon icon-4">✅</span>Três Cuidados Essenciais ao Falar de Artes Indígenas</h2>
+            <p>Para uma leitura responsável e respeitosa das artes indígenas, é fundamental ter em mente:</p>
+            <ul>
+                <li><span class="highlight">1. Falar no plural: “artes indígenas”</span>, reconhecendo diferentes povos, autores, repertórios e contextos. <span class="key-concept-item">PLURAL: não existe uma só arte</span></li>
+                <li><span class="highlight">2. Não congelar no passado:</span> essas artes continuam sendo criadas, transformadas e debatidas no presente. <span class="key-concept-item">VIVA: tradição muda</span></li>
+                <li><span class="highlight">3. Considerar a continuidade cultural:</span> mesmo novas criações podem trazer valores, técnicas e símbolos do povo a que o artista pertence, como legados transmitidos entre gerações. <span class="key-concept-item">SITUADA: valor é disputado</span></li>
+            </ul>
+            <div class="enem-tip">
+                <strong>Relevância para o ENEM:</strong> Estes três pontos são um excelente resumo para qualquer questão que envolva a análise de manifestações culturais indígenas. Eles servem como um guia para evitar generalizações e reconhecer a complexidade e a vitalidade dessas culturas.
+            </div>
+            <div class="notebook-area">
+                <label for="notes-4">Anotações sobre os Três Cuidados:</label>
+                <textarea id="notes-4" placeholder="Quais são os principais erros a evitar ao analisar a arte indígena?"></textarea>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><span class="card-icon icon-5">🌿</span>Características e Expressões: Ancestralidade, Sustentabilidade e Grafismos</h2>
+            <h3>Ancestralidade: memória que se transmite</h3>
+            <p>Entre características comuns a diferentes artes indígenas estão a ancestralidade e a transmissão de técnicas artesanais. Aprender e ensinar técnicas funciona como um fio de conexão entre gerações e contribui para manter a cultura viva.</p>
+            <div class="diagram-text">RECURSO NATURAL → TÉCNICA TRANSMITIDA → OBJETO / CORPO / SOM → USO E SIGNIFICADO</div>
+            <p>A ancestralidade não significa repetição imóvel: é uma relação ativa com conhecimentos herdados, que podem orientar novas produções.</p>
+            <h3>Sustentabilidade e relação com os materiais</h3>
+            <p>O uso consciente dos recursos naturais é uma característica comum. Os materiais não são apenas matéria-prima: estão ligados aos ambientes, aos conhecimentos e aos usos das comunidades.</p>
+            <h3>Grafismos: padrões com lógica social</h3>
+            <p>Grafismos são pinturas aplicadas em objetos e corpos. Os padrões têm uma lógica compreendida pelo artista e por seu grupo, e cada povo desenvolve estilos próprios. Eles comunicam mais do que decoração, estando relacionados a crenças, memórias, rituais e à estruturação da sociedade.</p>
+            <div class="key-concepts">
+                <span class="key-concept-item">repetição</span>
+                <span class="key-concept-item">simetria</span>
+                <span class="key-concept-item">transformação</span>
+            </div>
+            <div class="enem-tip">
+                <strong>Relevância para o ENEM:</strong> A relação entre arte, ancestralidade, sustentabilidade e o uso de recursos naturais é um tema interdisciplinar que pode aparecer em questões de Ciências Humanas e da Natureza. A compreensão dos grafismos como linguagem e não apenas como estética é crucial.
+            </div>
+            <div class="notebook-area">
+                <label for="notes-5">Anotações sobre Ancestralidade, Sustentabilidade e Grafismos:</label>
+                <textarea id="notes-5" placeholder="Como a arte indígena se conecta com o meio ambiente e a história de um povo?"></textarea>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><span class="card-icon icon-6">🖼️</span>Protagonismo Contemporâneo e Hibridização</h2>
+            <h3>Jaider Esbell: um exemplo de artista indígena contemporâneo</h3>
+            <p>Jaider Esbell (1979–2021), artista, escritor e produtor cultural indígena do povo Makuxi, é um dos principais representantes da arte indígena brasileira. Sua trajetória permite deslocar o olhar: artistas indígenas não são apenas tema, influência ou passado; são autores contemporâneos, produtores de obras e discursos sobre suas próprias experiências e referências.</p>
+            <div class="key-concepts">
+                <span class="key-concept-item">FORMA</span>
+                <span class="key-concept-item">CAMPO</span>
+                <span class="key-concept-item">PODER</span>
+            </div>
+            <h3>Mudança e hibridização no presente</h3>
+            <p>Cada etnia possui padrões e formas próprios. Hoje, alguns povos levam sua iconografia a peças comerciais, como parte da atividade econômica do grupo. Traçados indígenas também aparecem em roupas e acessórios não indígenas. A hibridização é parte de novos formatos adotados, seja por sobrevivência, seja pelas mudanças que ocorrem no contato entre culturas.</p>
+            <div class="enem-tip">
+                <strong>Relevância para o ENEM:</strong> O reconhecimento de artistas indígenas contemporâneos e a discussão sobre hibridização e apropriação cultural são temas muito atuais e relevantes. O ENEM pode apresentar obras de artistas como Jaider Esbell e pedir para analisar a questão da autoria, da representatividade e do diálogo entre culturas.
+            </div>
+            <div class="notebook-area">
+                <label for="notes-6">Anotações sobre Protagonismo e Hibridização:</label>
+                <textarea id="notes-6" placeholder="Qual a importância de conhecer artistas indígenas contemporâneos?"></textarea>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><span class="card-icon icon-7">🤔</span>Pausa de Aplicação: Situações e Debate</h2>
+            <p>Para consolidar seu aprendizado, reflita sobre a seguinte situação:</p>
+            <p>Uma estampa de uma peça feita por um artista indígena é exibida em uma galeria e depois aparece em produtos de uma marca não indígena, sem informação sobre autoria ou origem.</p>
+            <div class="key-concepts">
+                <span class="key-concept-item">OBJETO</span>
+                <span class="key-concept-item">CIRCULAÇÃO</span>
+                <span class="key-concept-item">DISCURSO</span>
+                <span class="key-concept-item">VALOR</span>
+            </div>
+            <p>Que perguntas sobre circulação, discurso, autoria e poder ajudam a analisar essa situação? Que informações seriam necessárias antes de julgar se houve troca cultural ou apropriação?</p>
+            <div class="enem-tip">
+                <strong>Relevância para o ENEM:</strong> Questões que envolvem análise de situações-problema são comuns no ENEM. Este tipo de exercício estimula o pensamento crítico sobre temas como apropriação cultural, direitos autorais e o papel das instituições na valorização ou desvalorização de manifestações culturais.
+            </div>
+            <div class="notebook-area">
+                <label for="notes-7">Anotações sobre a Pausa de Aplicação:</label>
+                <textarea id="notes-7" placeholder="Anote suas reflexões sobre a situação proposta."></textarea>
+            </div>
+        </div>
+
+        <h2 class="section-title">🏆 Hora do Desafio ENEM!</h2>
+
+        <div class="card question-block">
+            <h2><span class="card-icon icon-quiz">🏆</span>Desafio ENEM: Teste seus conhecimentos!</h2>
+            <p>Agora que você já explorou todo o conteúdo, é hora de testar o que aprendeu! Responda às 7 questões abaixo e use seu caderno de anotações para registrar suas respostas e justificativas.</p>
+
+            <!-- Questão 1 -->
+            <h3>Questão 1: O valor da arte</h3>
+            <p>Uma peça artesanal indígena, tradicionalmente utilizada em rituais, é adquirida por um colecionador e exposta em uma galeria de arte contemporânea, sendo descrita como "obra-prima da arte brasileira". De acordo com a perspectiva de Stuart Hall sobre o campo cultural, qual a afirmação mais adequada sobre essa situação?</p>
+            <div class="question-options">
+                <label><input type="radio" name="q1" value="A"> A) O valor artístico da peça é intrínseco e não se altera, independentemente do local de exposição.</label>
+                <label><input type="radio" name="q1" value="B"> B) A mudança de contexto (do ritual para a galeria) não afeta o significado original da peça, apenas sua visibilidade.</label>
+                <label><input type="radio" name="q1" value="C"> C) O reconhecimento como "obra-prima" é uma construção social que depende do campo cultural em que a peça circula e dos discursos que a legitimam.</label>
+                <label><input type="radio" name="q1" value="D"> D) A intenção do artista indígena ao criar a peça é o único fator determinante para seu valor e significado.</label>
+                <label><input type="radio" name="q1" value="E"> E) A peça perde seu valor cultural ao ser retirada de seu contexto original e inserida em um ambiente ocidental.</label>
+            </div>
+            <button class="check-answer-btn" onclick="checkAnswer('q1', 'C')">Verificar Resposta</button>
+            <div id="feedback-q1" class="feedback"></div>
+            <div id="explanation-q1" class="explanation" style="display:none;">
+                <p><span class="highlight">Alternativa correta: C.</span> Stuart Hall argumenta que o significado e o valor de uma forma cultural não são fixos, mas são produzidos e disputados dentro de um campo cultural específico, influenciado por discursos, instituições e grupos que a fazem circular. A mudança de contexto altera a percepção e o valor atribuído à peça.</p>
+            </div>
+            <div class="notebook-area">
+                <label for="notes-q1-pre">Minhas anotações sobre a Questão 1:</label>
+                <textarea id="notes-q1-pre" placeholder="Anote aqui seus pensamentos sobre a questão e a resposta."></textarea>
+            </div>
+
+            <!-- Questão 2 -->
+            <h3>Questão 2: Diversidade e "marco zero"</h3>
+            <p>O Censo 2022 do IBGE revelou a existência de 391 etnias e 295 línguas indígenas no Brasil. No entanto, é comum encontrar em narrativas históricas a ideia de que a "arte indígena" representa um "marco zero" homogêneo da cultura brasileira. Qual a principal crítica a essa visão?</p>
+            <div class="question-options">
+                <label><input type="radio" name="q2" value="A"> A) A crítica é inválida, pois a arte indígena, por ser antiga, naturalmente serve como ponto de partida para a arte nacional.</label>
+                <label><input type="radio" name="q2" value="B"> B) Essa visão desconsidera a imensa diversidade de povos, línguas e manifestações culturais indígenas, reduzindo-as a uma origem única e simplificada.</label>
+                <label><input type="radio" name="q2" value="C"> C) O problema reside apenas no fato de que o número de etnias e línguas é muito maior do que o registrado no Censo.</label>
+                <label><input type="radio" name="q2" value="D"> D) A arte indígena só pode ser considerada "marco zero" se for produzida com materiais naturais e técnicas tradicionais.</label>
+                <label><input type="radio" name="q2" value="E"> E) A visão de "marco zero" é prejudicial porque impede a valorização da arte europeia no Brasil.</label>
+            </div>
+            <button class="check-answer-btn" onclick="checkAnswer('q2', 'B')">Verificar Resposta</button>
+            <div id="feedback-q2" class="feedback"></div>
+            <div id="explanation-q2" class="explanation" style="display:none;">
+                <p><span class="highlight">Alternativa correta: B.</span> A ideia de "marco zero" homogêneo ignora a pluralidade dos povos indígenas, suas histórias e suas expressões artísticas, tratando-as como um bloco único e estático, o que não corresponde à realidade da diversidade cultural brasileira.</p>
+            </div>
+            <div class="notebook-area">
+                <label for="notes-q2-pre">Minhas anotações sobre a Questão 2:</label>
+                <textarea id="notes-q2-pre" placeholder="Anote aqui seus pensamentos sobre a questão e a resposta."></textarea>
+            </div>
+
+            <!-- Questão 3 -->
+            <h3>Questão 3: Apropriação cultural e grafismos</h3>
+            <p>Uma empresa de moda lança uma coleção de roupas com estampas inspiradas em grafismos indígenas, sem mencionar a origem ou autoria dos padrões e sem qualquer parceria com as comunidades. Qual dos "três cuidados para falar de artes indígenas" é mais diretamente violado nessa situação?</p>
+            <div class="question-options">
+                <label><input type="radio" name="q3" value="A"> A) "Falar no plural: 'artes indígenas'", pois a empresa não reconhece a diversidade.</label>
+                <label><input type="radio" name="q3" value="B"> B) "Não congelar no passado", pois a empresa usa padrões antigos.</label>
+                <label><input type="radio" name="q3" value="C"> C) "Considerar a continuidade cultural", pois a empresa não valoriza as técnicas tradicionais.</label>
+                <label><input type="radio" name="q3" value="D"> D) A questão da apropriação cultural não se encaixa em nenhum dos três cuidados, sendo um problema à parte.</label>
+                <label><input type="radio" name="q3" value="E"> E) "Considerar a continuidade cultural", pois o valor do grafismo é disputado e a apropriação desconsidera a autoria e o contexto cultural original.</label>
+            </div>
+            <button class="check-answer-btn" onclick="checkAnswer('q3', 'E')">Verificar Resposta</button>
+            <div id="feedback-q3" class="feedback"></div>
+            <div id="explanation-q3" class="explanation" style="display:none;">
+                <p><span class="highlight">Alternativa correta: E.</span> A apropriação cultural sem reconhecimento de autoria ou origem viola o cuidado de "considerar a continuidade cultural" e o fato de que o "valor é disputado". Os grafismos possuem significados profundos e são parte da identidade de um povo, e seu uso deve respeitar essa origem e autoria.</p>
+            </div>
+            <div class="notebook-area">
+                <label for="notes-q3-pre">Minhas anotações sobre a Questão 3:</label>
+                <textarea id="notes-q3-pre" placeholder="Anote aqui seus pensamentos sobre a questão e a resposta."></textarea>
+            </div>
+
+            <!-- Questão 4 -->
+            <h3>Questão 4: Arte utilitária e estética</h3>
+            <p>As artes indígenas são frequentemente descritas como "utilitárias", conjugando aspectos criativos e estéticos com um uso prático ou representativo. Qual a implicação dessa característica para a compreensão da arte indígena?</p>
+            <div class="question-options">
+                <label><input type="radio" name="q4" value="A"> A) Significa que a arte indígena não possui valor estético, sendo apenas funcional.</label>
+                <label><input type="radio" name="q4" value="B"> B) Implica que a beleza na arte indígena é secundária e não intencional.</label>
+                <label><input type="radio" name="q4" value="C"> C) Demonstra que a dimensão estética não se separa da utilidade, da representação ou do contexto social, desafiando a visão ocidental de "arte pela arte".</label>
+                <label><input type="radio" name="q4" value="D"> D) Indica que os artefatos indígenas não podem ser considerados arte, mas sim artesanato simples.</label>
+                <label><input type="radio" name="q4" value="E"> E) Sugere que a arte indígena é inferior à arte ocidental, que prioriza a contemplação.</label>
+            </div>
+            <button class="check-answer-btn" onclick="checkAnswer('q4', 'C')">Verificar Resposta</button>
+            <div id="feedback-q4" class="feedback"></div>
+            <div id="explanation-q4" class="explanation" style="display:none;">
+                <p><span class="highlight">Alternativa correta: C.</span> A característica utilitária da arte indígena não diminui seu valor estético, mas sim o integra profundamente ao cotidiano, aos rituais e à cosmovisão dos povos. Isso contrasta com a tradição ocidental que muitas vezes separa a arte de sua função prática.</p>
+            </div>
+            <div class="notebook-area">
+                <label for="notes-q4-pre">Minhas anotações sobre a Questão 4:</label>
+                <textarea id="notes-q4-pre" placeholder="Anote aqui seus pensamentos sobre a questão e a resposta."></textarea>
+            </div>
+
+            <!-- Questão 5 -->
+            <h3>Questão 5: Ancestralidade e transformação</h3>
+            <p>A ancestralidade é um pilar fundamental nas artes indígenas, manifestada na transmissão de técnicas e conhecimentos entre gerações. Qual a relação correta entre ancestralidade e a capacidade de transformação dessas artes?</p>
+            <div class="question-options">
+                <label><input type="radio" name="q5" value="A"> A) A ancestralidade impõe uma repetição exata das formas e técnicas, impedindo qualquer inovação.</label>
+                <label><input type="radio" name="q5" value="B"> B) A ancestralidade é uma relação ativa com conhecimentos herdados, que podem orientar novas produções e transformações, mantendo a cultura viva.</label>
+                <label><input type="radio" name="q5" value="C"> C) A arte indígena só pode ser considerada ancestral se for idêntica às peças arqueológicas encontradas.</label>
+                <label><input type="radio" name="q5" value="D"> D) A transmissão de técnicas é um sinal de que a arte indígena está "congelada no tempo" e não evolui.</label>
+                <label><input type="radio" name="q5" value="E"> E) A ancestralidade é um conceito irrelevante para a arte indígena contemporânea.</label>
+            </div>
+            <button class="check-answer-btn" onclick="checkAnswer('q5', 'B')">Verificar Resposta</button>
+            <div id="feedback-q5" class="feedback"></div>
+            <div id="explanation-q5" class="explanation" style="display:none;">
+                <p><span class="highlight">Alternativa correta: B.</span> A ancestralidade nas artes indígenas não significa imobilidade, mas sim uma base sólida de conhecimentos e valores que são reinterpretados e adaptados, permitindo a criação de novas formas e expressões que mantêm a cultura dinâmica e viva.</p>
+            </div>
+            <div class="notebook-area">
+                <label for="notes-q5-pre">Minhas anotações sobre a Questão 5:</label>
+                <textarea id="notes-q5-pre" placeholder="Anote aqui seus pensamentos sobre a questão e a resposta."></textarea>
+            </div>
+
+            <!-- Questão 6 -->
+            <h3>Questão 6: O papel de Jaider Esbell</h3>
+            <p>Jaider Esbell (1979–2021), artista Makuxi, é um exemplo de protagonismo indígena contemporâneo. Sua trajetória é importante para:</p>
+            <div class="question-options">
+                <label><input type="radio" name="q6" value="A"> A) Reforçar a ideia de que a arte indígena é apenas um tema ou influência para artistas não indígenas.</label>
+                <label><input type="radio" name="q6" value="B"> B) Demonstrar que artistas indígenas só podem ser reconhecidos se produzirem obras no estilo ocidental.</label>
+                <label><input type="radio" name="q6" value="C"> C) Deslocar o olhar, mostrando que artistas indígenas são autores contemporâneos, produtores de obras e discursos sobre suas próprias experiências e referências.</label>
+                <label><input type="radio" name="q6" value="D"> D) Provar que a arte indígena é estática e não se adapta às mudanças do mundo moderno.</label>
+                <label><input type="radio" name="q6" value="E"> E) Limitar a compreensão da arte indígena ao seu aspecto utilitário e ritualístico.</label>
+            </div>
+            <button class="check-answer-btn" onclick="checkAnswer('q6', 'C')">Verificar Resposta</button>
+            <div id="feedback-q6" class="feedback"></div>
+            <div id="explanation-q6" class="explanation" style="display:none;">
+                <p><span class="highlight">Alternativa correta: C.</span> A atuação de Jaider Esbell e de outros artistas indígenas contemporâneos é crucial para combater estereótipos e mostrar que os povos indígenas são sujeitos ativos na produção cultural, com vozes e perspectivas próprias no cenário artístico atual.</p>
+            </div>
+            <div class="notebook-area">
+                <label for="notes-q6-pre">Minhas anotações sobre a Questão 6:</label>
+                <textarea id="notes-q6-pre" placeholder="Anote aqui seus pensamentos sobre a questão e a resposta."></textarea>
+            </div>
+
+            <!-- Questão 7 -->
+            <h3>Questão 7: Interpretação de grafismos</h3>
+            <p>Ao observar um grafismo indígena com padrões simétricos e repetidos, um estudante conclui que ele serve apenas como decoração. Qual a abordagem mais responsável para interpretar esse grafismo?</p>
+            <div class="question-options">
+                <label><input type="radio" name="q7" value="A"> A) A conclusão está correta, pois a simetria e a repetição são características puramente estéticas.</label>
+                <label><input type="radio" name="q7" value="B"> B) Deve-se buscar um significado universal para o grafismo, aplicável a todas as etnias.</label>
+                <label><input type="radio" name="q7" value="C"> C) É fundamental investigar a autoria, o povo, o contexto, os usos e as explicações próprias da comunidade, pois grafismos comunicam mais do que decoração e possuem lógicas sociais.</label>
+                <label><input type="radio" name="q7" value="D"> D) O grafismo não pode ser interpretado por não indígenas, sendo inútil tentar compreendê-lo.</label>
+                <label><input type="radio" name="q7" value="E"> E) A melhor forma é reproduzir o grafismo em outros contextos para popularizá-lo.</label>
+            </div>
+            <button class="check-answer-btn" onclick="checkAnswer('q7', 'C')">Verificar Resposta</button>
+            <div id="feedback-q7" class="feedback"></div>
+            <div id="explanation-q7" class="explanation" style="display:none;">
+                <p><span class="highlight">Alternativa correta: C.</span> Grafismos indígenas são sistemas de comunicação complexos, com lógicas e significados específicos para cada povo. Reduzi-los a mera decoração é desconsiderar sua riqueza cultural e social. A interpretação responsável exige contextualização e respeito às explicações dos próprios criadores.</p>
+            </div>
+            <div class="notebook-area">
+                <label for="notes-q7-pre">Minhas anotações sobre a Questão 7:</label>
+                <textarea id="notes-q7-pre" placeholder="Anote aqui seus pensamentos sobre a questão e a resposta."></textarea>
+            </div>
+        </div>
+
+
+        <button class="generate-notes-btn" onclick="generateFinalNotes()">✨ Gerar Minha Folha de Anotações Final</button>
+
+        <div id="final-notes-sheet" class="card">
+            <h2><span class="card-icon icon-notebook">📄</span>Minha Folha de Anotações para o ENEM</h2>
+            <pre id="final-notes-content"></pre>
+            <div class="action-buttons">
+                <button class="generate-notes-btn print-btn" onclick="printNotes()">🖨️ Imprimir</button>
+                <button class="generate-notes-btn copy-btn" onclick="copyNotes()">📋 Copiar Anotações</button>
+                <button class="generate-notes-btn whatsapp-btn" onclick="sendWhatsApp()">💬 Enviar por WhatsApp</button>
+                <button class="generate-notes-btn email-btn" onclick="sendEmail()">✉️ Enviar por E-mail</button>
+            </div>
+            <span id="copy-feedback" class="copy-feedback"></span>
+        </div>
+
+        <div class="references card">
+            <h3>🔗 Para continuar estudando:</h3>
+            <ul>
+                <li><a href="https://mirim.org/pt-br/comovivem/arte" target="_blank">Povos Indígenas no Brasil Mirim — Instituto Socioambiental (ISA)</a>: conteúdo educativo sobre diversidade cultural e artes indígenas, com exemplos e explicações acessíveis.</li>
+                <li><a href="https://www.ibge.gov.br/biblioteca/visualizacao/periodicos/3103/cd_2022_indigenas.pdf" target="_blank">IBGE — Censo Demográfico 2022: Indígenas</a>: publicação de referência para dados demográficos, diversidade étnica e línguas.</li>
+                <li><a href="https://www.gov.br/povosindigenas/pt-br/assuntos/noticias/2025/10-1/censo-2022-brasil-tem-391-etnias-e-295-linguas-indigenas" target="_blank">Ministério dos Povos Indígenas — “Censo 2022: Brasil tem 391 etnias e 295 línguas indígenas” (2025)</a>: atualização dos resultados e explicação sobre diversidade e autoidentificação.</li>
+                <li><a href="http://www.jaideresbell.com.br/site/sobre-o-artista" target="_blank">Jaider Esbell — site oficial / “Sobre o Artista”</a>: informações biográficas e acesso a textos e obras do artista Makuxi.</li>
+            </ul>
+            <p>Referências de conteúdo: texto-base fornecido; Stuart Hall, “Notas sobre a desconstrução do ‘popular’” (2003), citado no texto-base. Os esquemas e diagramas desta apresentação são autorais; não foram usadas imagens externas.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Desenvolvido com carinho para o Profe. Gabe :)</p>
+    </footer>
+
+    <script>
+        function checkAnswer(questionName, correctAnswer) {
+            const options = document.getElementsByName(questionName);
+            let selectedAnswer = '';
+            for (const option of options) {
+                if (option.checked) {
+                    selectedAnswer = option.value;
+                    break;
+                }
+            }
+
+            const feedbackElement = document.getElementById(`feedback-${questionName}`);
+            const explanationElement = document.getElementById(`explanation-${questionName}`);
+
+            if (selectedAnswer === correctAnswer) {
+                feedbackElement.textContent = 'Correto! 🎉';
+                feedbackElement.className = 'feedback correct';
+            } else if (selectedAnswer === '') {
+                feedbackElement.textContent = 'Por favor, selecione uma opção.';
+                feedbackElement.className = 'feedback';
+            } else {
+                feedbackElement.textContent = 'Incorreto. Tente novamente ou veja a explicação.';
+                feedbackElement.className = 'feedback incorrect';
+            }
+            explanationElement.style.display = 'block'; // Always show explanation after checking
+        }
+
+        function generateFinalNotes() {
+            let allNotes = "=== Minhas Anotações sobre Artes Indígenas para o ENEM ===\n\n";
+
+            // Anotações gerais do caderno
+            const generalNotes = document.getElementById('general-notes');
+            if (generalNotes && generalNotes.value.trim() !== '') {
+                allNotes += "--- Anotações Gerais do Caderno ---\n";
+                allNotes += generalNotes.value.trim() + "\n\n";
+            }
+
+            // Anotações das questões pré-conteúdo
+            for (let i = 1; i <= 7; i++) {
+                const notesId = `notes-q${i}-pre`;
+                const textarea = document.getElementById(notesId);
+                if (textarea && textarea.value.trim() !== '') {
+                    allNotes += `--- Anotações da Questão ${i} (Desafio Inicial) ---\n`;
+                    allNotes += textarea.value.trim() + "\n\n";
+                }
+            }
+
+            // Anotações das seções de conteúdo
+            const contentSections = [
+                { id: 'notes-1', title: 'Introdução: O que é "Arte Indígena"?' },
+                { id: 'notes-2', title: 'O Campo Cultural e a Luta por Significado' },
+                { id: 'notes-3', title: 'Diversidade Indígena e o "Marco Zero"' },
+                { id: 'notes-4', title: 'Três Cuidados Essenciais ao Falar de Artes Indígenas' },
+                { id: 'notes-5', title: 'Características e Expressões: Ancestralidade, Sustentabilidade e Grafismos' },
+                { id: 'notes-6', title: 'Protagonismo Contemporâneo e Hibridização' },
+                { id: 'notes-7', title: 'Pausa de Aplicação: Situações e Debate' }
+            ];
+
+            contentSections.forEach(section => {
+                const textarea = document.getElementById(section.id);
+                if (textarea && textarea.value.trim() !== '') {
+                    allNotes += `--- ${section.title} ---\n`;
+                    allNotes += textarea.value.trim() + "\n\n";
+                }
+            });
+
+            if (allNotes === "=== Minhas Anotações sobre Artes Indígenas para o ENEM ===\n\n") {
+                allNotes += "Nenhuma anotação foi feita ainda. Comece a explorar o conteúdo e registre seus aprendizados!\n";
+            }
+
+            document.getElementById('final-notes-content').textContent = allNotes;
+            document.getElementById('final-notes-sheet').style.display = 'block';
+            document.getElementById('final-notes-sheet').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function copyNotes() {
+            const text = document.getElementById('final-notes-content').textContent;
+            const feedback = document.getElementById('copy-feedback');
+
+            function showFeedback() {
+                feedback.textContent = '✅ Anotações copiadas! Agora é só colar no WhatsApp ou e-mail.';
+                setTimeout(() => { feedback.textContent = ''; }, 4000);
+            }
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(showFeedback).catch(() => {
+                    fallbackCopy(text, showFeedback);
+                });
+            } else {
+                fallbackCopy(text, showFeedback);
+            }
+        }
+
+        function fallbackCopy(text, callback) {
+            const tempArea = document.createElement('textarea');
+            tempArea.value = text;
+            tempArea.style.position = 'fixed';
+            tempArea.style.left = '-9999px';
+            document.body.appendChild(tempArea);
+            tempArea.focus();
+            tempArea.select();
+            try {
+                document.execCommand('copy');
+                if (callback) callback();
+            } catch (err) {
+                console.error('Não foi possível copiar automaticamente:', err);
+            }
+            document.body.removeChild(tempArea);
+        }
+
+        function sendWhatsApp() {
+            const text = document.getElementById('final-notes-content').textContent;
+            const url = 'https://wa.me/?text=' + encodeURIComponent(text);
+            window.open(url, '_blank');
+        }
+
+        function sendEmail() {
+            const text = document.getElementById('final-notes-content').textContent;
+            const subject = 'Minhas Anotações sobre Artes Indígenas para o ENEM';
+            const url = 'mailto:?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(text);
+            window.location.href = url;
+        }
+
+        function printNotes() {
+            const printContent = document.getElementById('final-notes-content').textContent;
+            const printWindow = window.open('', '', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Minhas Anotações</title>');
+            printWindow.document.write('<style>body{font-family: \'Open Sans\', sans-serif; line-height: 1.6; margin: 20px;} pre{white-space: pre-wrap; font-family: \'Courier New\', Courier, monospace;}</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write('<h1>Minhas Anotações sobre Artes Indígenas para o ENEM</h1>');
+            printWindow.document.write('<pre>' + printContent + '</pre>');
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        }
+    </script>
+</body>
+</html>

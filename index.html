@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Artes Indígenas | Desafio ENEM</title>
+
+  <meta
+    name="description"
+    content="Guia de estudo sobre artes indígenas brasileiras, Stuart Hall, Jaider Esbell e questões autorais em estilo ENEM."
+  >
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-pattern" aria-hidden="true"></div>
+
+    <div class="container header-content">
+      <div>
+        <p class="eyebrow">Caderno Vivo</p>
+        <h1>Artes indígenas brasileiras</h1>
+        <p class="header-subtitle">
+          Guia de estudo e desafio autoral em estilo ENEM
+        </p>
+      </div>
+
+      <button
+        type="button"
+        class="menu-button"
+        id="menu-button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        ☰
+      </button>
+
+      <nav id="main-navigation" class="main-navigation" aria-label="Navegação principal">
+        <a href="#caderno">Caderno</a>
+        <a href="#conteudo">Conteúdo</a>
+        <a href="#desafio">Desafio ENEM</a>
+        <a href="#resultado">Meu resultado</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Estudar também é escutar</p>
+
+          <h2>
+            Uma leitura plural, viva e situada das artes indígenas.
+          </h2>
+
+          <p>
+            Explore conceitos, registre suas ideias e acompanhe seu percurso
+            por meio de um mapa mental personalizado.
+          </p>
+
+          <a class="button button-primary" href="#caderno">
+            Começar estudo
+          </a>
+        </div>
+
+        <div class="hero-symbols" aria-hidden="true">
+          <span>◆</span>
+          <span>◇</span>
+          <span>◆</span>
+          <span>◇</span>
+          <span>◆</span>
+          <span>◇</span>
+          <span>◆</span>
+          <span>◇</span>
+          <span>◆</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="caderno">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Seu espaço de estudo</p>
+          <h2>Caderno de anotações</h2>
+          <p>
+            As anotações são salvas automaticamente neste navegador e também
+            alimentam o seu mapa mental personalizado.
+          </p>
+        </div>
+
+        <div class="card">
+          <label for="general-notes">
+            <strong>Anotações gerais</strong>
+          </label>
+
+          <textarea
+            id="general-notes"
+            class="note-field"
+            data-note-id="general"
+            rows="6"
+            placeholder="Registre aqui suas principais ideias, dúvidas ou relações com outros conteúdos..."
+          ></textarea>
+
+          <p class="save-status" id="general-save-status" aria-live="polite">
+            Ainda não há alterações recentes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="conteudo">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Explore o conteúdo</p>
+          <h2>Conceitos essenciais para o ENEM</h2>
+        </div>
+
+        <div class="content-grid">
+          <article class="content-card">
+            <span class="card-number">01</span>
+            <h3>O que é “arte indígena”?</h3>
+
+            <p>
+              Quem decide se um objeto é arte? O valor de uma produção cultural
+              não está apenas em sua forma. Ele também é construído pelo lugar
+              onde o objeto circula, pelos grupos que o apresentam e pelos
+              discursos que justificam sua importância.
+            </p>
+
+            <div class="concept-strip">
+              <span>Forma</span>
+              <span>Campo</span>
+              <span>Poder</span>
+            </div>
+
+            <p class="exam-tip">
+              <strong>Para o ENEM:</strong>
+              a arte não é um conceito universal e imutável. O contexto modifica
+              as interpretações e os valores atribuídos às produções.
+            </p>
+
+            <label for="note-introducao">
+              Anotações sobre a introdução
+            </label>
+
+            <textarea
+              id="note-introducao"
+              class="note-field section-note"
+              data-note-id="introducao"
+              rows="5"
+              placeholder="O que você entendeu sobre forma, campo e poder?"
+            ></textarea>
+          </article>
+
+          <article class="content-card">
+            <span class="card-number">02</span>
+            <h3>Stuart Hall e o campo cultural</h3>
+
+            <p>
+              Stuart Hall afirma que o significado de uma forma cultural e sua
+              posição no campo cultural não estão inscritos definitivamente em
+              sua forma.
+            </p>
+
+            <blockquote>
+              “O significado de uma forma cultural e seu lugar ou posição no
+              campo cultural não está inscrito no interior de sua forma.”
+            </blockquote>
+
+            <p>
+              Os significados são disputados, negociados e reconfigurados por
+              grupos, discursos e instituições.
+            </p>
+
+            <div class="concept-strip">
+              <span>Grupos</span>
+              <span>Discursos</span>
+              <span>Instituições</span>
+            </div>
+
+            <label for="note-stuart-hall">
+              Anotações sobre o campo cultural
+            </label>
+
+            <textarea
+              id="note-stuart-hall"
+              class="note-field section-note"
+              data-note-id="stuart-hall"
+              rows="5"
+              placeholder="Como o contexto pode alterar o valor atribuído a uma obra?"
+            ></textarea>
+          </article>
+
+          <article class="content-card">
+            <span class="card-number">03</span>
+            <h3>Diversidade e “marco zero”</h3>
+
+            <p>
+              O Brasil possui grande diversidade de povos, etnias, línguas,
+              histórias e formas de expressão. Por isso, não é adequado tratar
+              “a arte indígena” como um bloco único.
+            </p>
+
+            <p>
+              A ideia de “marco zero” pode reduzir essa pluralidade a uma origem
+              homogênea da cultura brasileira e tornar invisíveis as criações
+              indígenas contemporâneas.
+            </p>
+
+            <div class="highlight-box">
+              <strong>Ideia-chave:</strong>
+              artes indígenas devem ser compreendidas no plural, em sua
+              diversidade histórica e contemporânea.
+            </div>
+
+            <label for="note-diversidade">
+              Anotações sobre diversidade e marco zero
+            </label>
+
+            <textarea
+              id="note-diversidade"
+              class="note-field section-note"
+              data-note-id="diversidade"
+              rows="5"
+              placeholder="Que problema existe em tratar todos os povos indígenas como um grupo único?"
+            ></textarea>
+          </article>
+
+          <article class="content-card">
+            <span class="card-number">04</span>
+            <h3>Três cuidados essenciais</h3>
+
+            <ol class="care-list">
+              <li>
+                <strong>Falar no plural:</strong>
+                reconhecer diferentes povos, autores e contextos.
+              </li>
+
+              <li>
+                <strong>Não congelar no passado:</strong>
+                compreender que essas artes continuam sendo criadas e
+                transformadas.
+              </li>
+
+              <li>
+                <strong>Considerar a continuidade cultural:</strong>
+                perceber como conhecimentos e valores podem orientar novas
+                produções.
+              </li>
+            </ol>
+
+            <label for="note-cuidados">
+              Anotações sobre os três cuidados
+            </label>
+
+            <textarea
+              id="note-cuidados"
+              class="note-field section-note"
+              data-note-id="cuidados"
+              rows="5"
+              placeholder="Escreva uma frase que sintetize os três cuidados."
+            ></textarea>
+          </article>
+
+          <article class="content-card">
+            <span class="card-number">05</span>
+            <h3>Ancestralidade, sustentabilidade e grafismos</h3>
+
+            <p>
+              A ancestralidade envolve a transmissão ativa de conhecimentos,
+              técnicas e valores entre gerações. Ela não significa repetição
+              imóvel.
+            </p>
+
+            <p>
+              Os grafismos também não devem ser vistos apenas como decoração.
+              Seus padrões podem estar relacionados a memórias, crenças,
+              rituais, identidades e formas de organização social.
+            </p>
+
+            <div class="flow-diagram">
+              <span>Recurso natural</span>
+              <b>→</b>
+              <span>Técnica transmitida</span>
+              <b>→</b>
+              <span>Uso e significado</span>
+            </div>
+
+            <label for="note-grafismos">
+              Anotações sobre ancestralidade, sustentabilidade e grafismos
+            </label>
+
+            <textarea
+              id="note-grafismos"
+              class="note-field section-note"
+              data-note-id="grafismos"
+              rows="5"
+              placeholder="Por que um grafismo não deve ser reduzido à decoração?"
+            ></textarea>
+          </article>
+
+          <article class="content-card">
+            <span class="card-number">06</span>
+            <h3>Jaider Esbell e o protagonismo contemporâneo</h3>
+
+            <p>
+              Jaider Esbell (1979–2021), artista, escritor e produtor cultural
+              indígena do povo Makuxi, é uma referência para compreender o
+              protagonismo indígena na arte contemporânea.
+            </p>
+
+            <p>
+              Sua trajetória desloca o olhar: artistas indígenas são autores,
+              produtores de obras e formuladores de discursos sobre suas
+              próprias experiências.
+            </p>
+
+            <p>
+              A hibridização pode surgir no contato entre culturas, mas deve ser
+              analisada considerando autoria, contexto, consentimento e relações
+              de poder.
+            </p>
+
+            <label for="note-protagonismo">
+              Anotações sobre protagonismo e hibridização
+            </label>
+
+            <textarea
+              id="note-protagonismo"
+              class="note-field section-note"
+              data-note-id="protagonismo"
+              rows="5"
+              placeholder="O que muda quando artistas indígenas ocupam o lugar de autores?"
+            ></textarea>
+          </article>
+
+          <article class="content-card content-card-wide">
+            <span class="card-number">07</span>
+            <h3>Pausa de aplicação</h3>
+
+            <p>
+              Uma estampa criada por um artista indígena é exibida em uma
+              galeria e depois aparece em produtos de uma marca não indígena,
+              sem informação sobre autoria ou origem.
+            </p>
+
+            <p>
+              Antes de classificar a situação, investigue: quem criou? Quem
+              autorizou? Como ocorreu a circulação? Quem se beneficia? O povo
+              ou artista foi identificado? Houve parceria ou apagamento?
+            </p>
+
+            <div class="concept-strip">
+              <span>Objeto</span>
+              <span>Circulação</span>
+              <span>Discurso</span>
+              <span>Valor</span>
+            </div>
+
+            <label for="note-aplicacao">
+              Anotações sobre a pausa de aplicação
+            </label>
+
+            <textarea
+              id="note-aplicacao"
+              class="note-field section-note"
+              data-note-id="aplicacao"
+              rows="6"
+              placeholder="Que perguntas você faria para analisar essa situação?"
+            ></textarea>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="desafio">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Hora do desafio</p>
+          <h2>Questões autorais em estilo ENEM</h2>
+          <p>
+            Responda às questões e confira a correção comentada. O resultado
+            será incorporado ao seu mapa mental.
+          </p>
+        </div>
+
+        <div id="quiz-container" class="quiz-container"></div>
+
+        <div class="quiz-actions">
+          <button type="button" class="button button-primary" id="finish-quiz">
+            Corrigir desafio
+          </button>
+
+          <button type="button" class="button button-secondary" id="reset-quiz">
+            Limpar respostas
+          </button>
+        </div>
+
+        <div
+          id="quiz-result"
+          class="quiz-result"
+          aria-live="polite"
+          hidden
+        ></div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="resultado">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Síntese personalizada</p>
+          <h2>Minha folha de anotações</h2>
+          <p>
+            Gere um resumo e um mapa mental com base no seu percurso individual.
+          </p>
+        </div>
+
+        <div class="result-actions">
+          <button type="button" class="button button-primary" id="generate-summary">
+            Gerar resumo e mapa
+          </button>
+
+          <button type="button" class="button button-secondary" id="print-page">
+            Imprimir
+          </button>
+
+          <button type="button" class="button button-secondary" id="copy-notes">
+            Copiar anotações
+          </button>
+
+          <button type="button" class="button button-secondary" id="share-whatsapp">
+            Enviar por WhatsApp
+          </button>
+
+          <button type="button" class="button button-secondary" id="send-email">
+            Enviar por e-mail
+          </button>
+        </div>
+
+        <article class="summary-card">
+          <h3>Resumo da análise</h3>
+          <div id="summary-content">
+            <p>
+              O resumo aparecerá aqui depois que você preencher suas anotações
+              ou responder ao desafio.
+            </p>
+          </div>
+        </article>
+
+        <article class="mind-map-card">
+          <div class="mind-map-heading">
+            <div>
+              <h3>Mapa mental personalizado</h3>
+              <p>
+                Clique em um nó para visualizar seu conteúdo completo.
+              </p>
+            </div>
+
+            <span class="map-legend">
+              <span><i class="legend-note"></i> Anotação</span>
+              <span><i class="legend-correct"></i> Acerto</span>
+              <span><i class="legend-review"></i> Revisão</span>
+            </span>
+          </div>
+
+          <div class="map-wrapper">
+            <svg
+              id="mind-map"
+              role="img"
+              aria-label="Mapa mental personalizado sobre artes indígenas"
+              viewBox="0 0 1100 680"
+            ></svg>
+          </div>
+
+          <div id="map-accessible-list" class="accessible-map-list">
+            <h4>Versão textual do mapa</h4>
+            <p>Gere o mapa para visualizar a versão textual.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="map-dialog">
+    <button
+      type="button"
+      class="dialog-close"
+      id="close-dialog"
+      aria-label="Fechar janela"
+    >
+      ×
+    </button>
+
+    <p class="eyebrow">Detalhe do mapa</p>
+    <h2 id="dialog-title">Conteúdo</h2>
+    <p id="dialog-content"></p>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        Material autoral de estudo. Valorize a diversidade, a autoria e os
+        contextos específicos dos povos indígenas.
+      </p>
+
+      <p>
+        Desenvolvido com carinho para o Profe. Gabe :)
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
